@@ -1,0 +1,103 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <style>
+        #g-recaptcha-response {
+            display: block !important;
+            position: absolute;
+            margin: -78px 0 0 0 !important;
+            width: 302px !important;
+            height: 76px !important;
+            z-index: -999999;
+            opacity: 0;
+        }
+    </style>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="https://www.google.com/recaptcha/api.js"></script>
+</head>
+<body>
+
+    <div class="flex flex-col h-screen justify-between">
+        <main class="mb-auto h-10 bg-green-500">
+            <div class="flex items-center min-h-screen p-4 bg-gray-100 lg:justify-center">
+        
+                <div class="flex flex-col overflow-hidden bg-white rounded-md shadow-lg max md:flex-row md:flex-1 lg:max-w-screen-md"
+                >
+                    
+                    <div class="p-4 py-6 text-white bg-green-500 md:w-80 md:flex-shrink-0 md:flex md:flex-col md:items-center md:justify-evenly">
+                        <div  class="my-3 text-4xl font-bold tracking-wider text-center">
+                            <a href="https://kalbarprov.go.id/">
+                                <img src="logo-provinsi-kalbar.png" alt="" class="h-36">
+                            </a>
+                        </div>
+        
+                        <p class="mt-6 font-normal text-center text-slate-100 md:mt-0">
+                            Single Sign On (SSO) ASN<br>Pemerintah Provinsi Kalimantan Barat
+                        </p>
+        
+                    </div>
+        
+                    <div class="p-5 bg-white md:flex-1">
+                        <h3 class="my-4 text-2xl font-semibold text-gray-700">Masuk</h3>
+                        <form action="#" class="flex flex-col space-y-5">
+                            <div class="flex flex-col space-y-1">
+                            <label for="email" class="text-sm font-semibold text-gray-500">Nama Pengguna atau Email</label>
+                            <input
+                                type="email"
+                                id="email"
+                                autofocus
+                                class="px-4 py-2 transition duration-300 border border-gray-300 rounded focus:border-transparent focus:outline-none focus:ring-4 focus:ring-blue-200"
+                            />
+                            </div>
+        
+                            <div class="flex flex-col space-y-1">
+                            <div class="flex items-center justify-between">
+                                <label for="password" class="text-sm font-semibold text-gray-500">Kata Sandi</label>
+                                <a href="#" class="text-sm text-blue-600 hover:underline focus:text-blue-800">Lupa Password?</a>
+                            </div>
+                            <input
+                                type="password"
+                                id="password"
+                                class="px-4 py-2 transition duration-300 border border-gray-300 rounded focus:border-transparent focus:outline-none focus:ring-4 focus:ring-blue-200"
+                            />
+                            </div>
+        
+                            <div class="g-recaptcha" data-sitekey="<--reCAPTCHA v2 site key-->"></div>
+                            <!-- <div class="flex items-center space-x-2">
+                                <input
+                                    type="checkbox"
+                                    id="remember"
+                                    class="w-4 h-4 transition duration-300 rounded focus:ring-2 focus:ring-offset-0 focus:outline-none focus:ring-blue-200"
+                                />
+                                <label for="remember" class="text-sm font-semibold text-gray-500">Remember me</label>
+                            </div> -->
+        
+                            <div>
+                            <button
+                                type="submit"
+                                class="w-full px-4 py-2 text-lg font-semibold text-white transition-colors duration-300 bg-green-500 rounded-md shadow hover:bg-green-600 focus:outline-none focus:ring-blue-200 focus:ring-4"
+                            >
+                                Log in
+                            </button>
+                            </div>
+        
+                        </form>
+                    </div>
+        
+                </div>
+        
+            </div>
+        </main>
+        <footer class="h-10 bg-green-500 flex justify-center content-center">
+            <span class="text-sm text-gray-500 text-slate-100 content-center">
+                ©<a href="https://kalbarprov.go.id/">Pemerintah Provinsi Kalimantan Barat</a> 2024, All rights reserved.
+            </span>
+        </footer>
+    </div>
+
+</body>
+</html>
